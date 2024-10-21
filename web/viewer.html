@@ -34,15 +34,6 @@ See https://github.com/adobe-type-tools/cmap-resources
     <link rel="stylesheet" href="viewer.css">
 
   <script src="viewer.mjs" type="module"></script>
-  <script type="text/javascript">
-    $(function () {
-        document.addEventListener("pagerendered", function (e) {
-            $('#print').hide();
-            $('#viewBookmark').hide();
-            $('#openFile').hide();
-        });
-    });
-</script>
   </head>
 
   <body tabindex="0">
@@ -154,6 +145,12 @@ See https://github.com/adobe-type-tools/cmap-resources
                   <button class="toolbarButton" type="button" title="Next Page" id="next" tabindex="0" data-l10n-id="pdfjs-next-button">
                     <span data-l10n-id="pdfjs-next-button-label">Next</span>
                   </button>
+                </div>
+                <div class="toolbarHorizontalGroup">
+                  <span class="loadingInput start toolbarHorizontalGroup">
+                    <input type="number" id="pageNumber" class="toolbarField" title="Page" value="1" min="1" tabindex="0" data-l10n-id="pdfjs-page-input" autocomplete="off">
+                  </span>
+                  <span id="numPages" class="toolbarLabel"></span>
                 </div>
               </div>
               <div id="toolbarViewerMiddle" class="toolbarHorizontalGroup">
