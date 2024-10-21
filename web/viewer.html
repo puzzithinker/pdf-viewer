@@ -34,6 +34,15 @@ See https://github.com/adobe-type-tools/cmap-resources
     <link rel="stylesheet" href="viewer.css">
 
   <script src="viewer.mjs" type="module"></script>
+  <script type="text/javascript">
+    $(function () {
+        document.addEventListener("pagerendered", function (e) {
+            $('#print').hide();
+            $('#viewBookmark').hide();
+            $('#openFile').hide();
+        });
+    });
+</script>
   </head>
 
   <body tabindex="0">
